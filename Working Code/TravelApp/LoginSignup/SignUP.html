@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUP</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!--container-->
+
+        <form class="form-group" action="connectuser.php" method="post">
+            <!--form-->
+            <div>
+                <span>
+                    <h1 class="text-white">Sign Up</h1>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="SignUP.html">Sign Up</a>
+                        </li>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+
+            <div id="formUser">
+                <!--form-->
+                <h3 class="text-white">Register</h3>
+
+                <div id="input-EmailID">
+                    <!--input-EmailID-->
+                    <input type="email" id="inputgroupemail" placeholder="Email ID"  name="inputgroupemail" required>
+                </div>
+                <!--input-EmailID-->
+
+                <div id="inputPassword">
+                    <!--inputPassword-->
+                    <input type="text" id="inputgroupPassword" placeholder="Password" name="inputgroupPassword" required>
+                    <input type="text" id="inputgroupConfirmPassword" placeholder="Confirm Password" name="inputgroupConfirmPassword" required>
+                </div>
+                <!--inputPassword-->
+
+                <button type="submit" class="btn btn-warning text-white">Register</button>
+                <button type="reset" class="btn btn-primary">Cancel</button>
+            </div>
+            <!--form-->
+        </form>
+        <!--form-->
+
+    </div>
+    <!--container-->
+</body>
+
+</html>
