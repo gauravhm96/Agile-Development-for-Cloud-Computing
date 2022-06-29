@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!--container-->
+
+        <form id="trainEnquireform" class="form-group" >
+            <!--form-->
+            <div>
+                <span>
+                    <h1 class="text-white">Train Service</h1>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="book.html">Book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking details.html">My Book Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="enquire.html">Enquire</a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+
+            <div id="formenquire">
+                <!--form-->
+                <h3 class="text-white">Booking Enquiry</h3>
+
+                <div id="inputUUID">
+                    <!--inputUUID-->
+                    <input type="text" id="input-groupUUID" name="UserID" placeholder="Enter User ID to Check Status" required>
+                </div>
+                <!--inputUUID-->
+
+                <div id="inputEnquiryhead">
+                    <!--inputdates-->
+                    <h3 class="text-white">Enquired Data</h3>
+                </div>
+
+                <div id="inputMyEnquireDetails">
+                    <!--inputMyBookingDetails-->
+
+                    <h6> User ID : <span style="color:white" id="uuid"></span></h6>
+                    <h6> Status  : <span style="color:white" id="status"></span></h6>
+                    <h6> Train Time ID  : <span style="color:white" id="train_time_id"></span></h6>
+                    <h6> From Station ID  : <span style="color:white" id="from_station_id"></span></h6>
+                    <h6> To Station ID  : <span style="color:white" id="to_station_id"></span></h6>
+                    <h6> Date (yyyy.mm.dd) : <span style="color:white" id="train_date"></span></h6>
+                    <h6> Train Start Time : <span style="color:white" id="train_start_time"></span></h6>
+                    <h6> Train End Time : <span style="color:white" id="train_end_time"></span></h6>
+                    <h6> Class : <span style="color:white" id="trainClass"></span></h6>
+                    <h6> Booking Time : <span style="color:white" id="booking_time"></span></h6>
+                    <h6> Connecting : <span style="color:white" id="connecting"></span></h6>
+                    <h6> Payment Status : <span style="color:white" id="payment_status"></span></h6>                      
+                    <h6> Amount : <span style="color:white" id="amount"></span></h6>
+                    <h6> Number of Passengers : <span style="color:white" id="no_of_passenger"></span></h6>
+                    <h6> Special Service : <span style="color:white" id="special_service_flag"></span></h6>
+                    <h6> Seats : <span style="color:white" id="seats"></span></h6>
+                    <h6> Seat Number : <span style="color:white" id="seat_no"></span></h6>
+                    <h6> Food Service : <span style="color:white" id="food_service"></span></h6>
+                    <h6> Luggage Service : <span style="color:white" id="luggage_service"></span></h6>
+                </div>
+
+                <!--inputMyBookingDetails-->
+                <button type="submit" class="btn btn-warning text-white">Enquire</button>
+                <button type="reset" class="btn btn-primary">Clear</button>
+            </div>
+        </form>
+        <!--form-->
+
+    </div>
+    <!--container-->
+
+</body>
+<script src="scripts.js"></script>
+</html>

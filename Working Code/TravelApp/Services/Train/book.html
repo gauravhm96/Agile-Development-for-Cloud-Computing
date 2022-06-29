@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!--container-->
+
+        <form id="trainbookingform" class="form-group">
+            <!--form-->
+            <div>
+                <span>
+                    <h1 class="text-white">Train Service</h1>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="book.html">Book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking details.html">Book Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="enquire.html">Enquire</a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+
+            <div id="form">
+                <!--form-->
+                <h3 class="text-white">Booking Details</h3>
+
+                <div id="inputUUID">
+                    <!--inputUUID-->
+                    <input type="text" id="input-groupUUID" name="UserID" placeholder="User ID" required>
+                </div>
+                <!--inputUUID-->
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">From</label>
+                    </div>
+                    <select class="browser-default custom-select" id="inputGroupSelect01" name="Source" style="background: black; color:#fff;" required>
+                        <option value="">Select</option>
+                        <option value="frankfurt">Frankfurt</option>
+                        <option value="berlin">Berlin</option>
+                        <option value="cologne">Cologne</option>
+                        <option value="augsburg">Augsburg</option>
+                        <option value="munich">Munich</option>
+                        <option value="hamburg">Hamburg</option>
+                        <option value="stuttgart">Stuttgart</option>
+                        <option value="hannover">Hannover</option>
+                        <option value="leipzig">Leipzig</option>
+                        <option value="dortmund">Dortmund</option>
+                        <option value="nurnberg">Nurnberg</option>
+                        <option value="erfurt">Erfurt</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">To</label>
+                    </div>
+                    <select class="browser-default custom-select" id="inputGroupSelect02" name="Destination" style="background: black; color:#fff;" required>
+                        <option value="">Select</option>
+                        <option value="frankfurt">Frankfurt</option>
+                        <option value="berlin">Berlin</option>
+                        <option value="cologne">Cologne</option>
+                        <option value="augsburg">Augsburg</option>
+                        <option value="munich">Munich</option>
+                        <option value="hamburg">Hamburg</option>
+                        <option value="stuttgart">Stuttgart</option>
+                        <option value="hannover">Hannover</option>
+                        <option value="leipzig">Leipzig</option>
+                        <option value="dortmund">Dortmund</option>
+                        <option value="nurnberg">Nurnberg</option>
+                        <option value="erfurt">Erfurt</option>
+                    </select>
+                </div>
+
+                <div id="inputdates">
+                    <!--inputdates-->
+                    <input type="date" id="input-groupDate" placeholder="Date (yyyy.mm.dd)" name="date" required>
+                    <input type="time" id="input-grouptime" placeholder="Time (mm:ss)" name="time" required>
+                </div>
+                <!--inputdates-->
+
+                <div id="inputClass">
+                    <!--inputClass-->
+                    <select id="input-groupclass" name="seatclass" style="background: black;" required>
+                        <option value="">Preffered Class</option>
+                        <option value="1">1st Class</option>
+                        <option value="2">2nd Class</option>
+                    </select>
+                </div>
+                <!--inputClass-->
+
+                <div id="inputNumberofPassengersSpcSrv">
+                    <!--inputNumberofPassengers-->
+                    <input type="number" id="input-groupPassengers" name="nopassengers" placeholder="Number of Passengers" required>
+                    <input type="number" id="input-groupSeats" name="noseats" placeholder="Number of Seats" required>
+                    <select id="input-groupspecialservice" name="Specialservice" style="background: black;" required>
+                        <option value="">Special Service</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <!--inputNumberofPassengers-->
+
+                <div id="inputFoodLuggage">
+                    <!--inputFoodLuggage-->
+                    <select id="input-groupFood" name="foodService" style="background: black;" required>
+                        <option value="">Food Service</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <select id="input-groupLuggage" name="luggageservice" style="background: black;" required>
+                        <option value="">Luggage Service</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <!--inputFoodLuggage-->
+
+                 <button type="submit" id="btn" class="btn btn-warning text-white">Book</button>
+                <button type="reset" class="btn btn-primary">Clear</button>
+
+            </div>
+        </form>
+        <!--form-->
+
+    </div>
+    <!--container-->
+            <!--=============== MAIN JS ===============-->
+            <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+body{
+    background-image: url(home1.jpg);
+    background-size: cover;
+}
+#formSearchFlight{
+    background-color: #000;
+    height:560px;
+    width:700px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.7;
+}
+
+div {
+    text-align: center;
+}
+
+
+#form h3{
+    border-bottom: 2px solid #3399ff;
+    width:210px;
+    padding: 5px;
+}
+::placeholder{
+    color:#fff
+}
+
+#input #input-group{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputHeading h3{
+    border-bottom: 2px solid #3399ff;
+    width:190px;
+    padding: 5px;
+}
+
+#inputMySearchDetails{
+    width:610px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    text-align: left;
+}
+
+#inputdates #input-groupDate{
+    width:650px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#formBookFlights{
+    background-color: #000;
+    height:240px;
+    width:700px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.7;
+}
+
+#input-ItinerarySeatID #input-groupItenaryID{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#input-ItinerarySeatID #input-groupSeatID{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputnameagesex #input-groupFirst{
+    width:143px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputnameagesex #input-groupLast{
+    width:143px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputnameagesex #input-groupAge{
+    width:143px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputnameagesex #input-groupSex{
+    width:143px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputnameagesex #input-groupAgegetbook{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputnameagesex #input-groupSexgetbook{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputdatesflight #input-groupDatef{
+    width:610px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#formGetFlightDetails{
+    background-color: #000;
+    height:350px;
+    width:700px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.7;
+}
+
+#formReschedule{
+    background-color: #000;
+    height:350px;
+    width:700px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.7;
+}
+
+
+#inputHeadingReschedule h3{
+    border-bottom: 2px solid #3399ff;
+    width:239px;
+    padding: 5px;
+}
+#inputRescheduleDetails{
+    width:610px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    text-align: left;
+}
+
+#input-RescheduleBookingtID #input-groupRescheduleBookingtID{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#input-RescheduleBookingtID #input-groupRescheduleBookingDate{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#formCancel{
+    background-color: #000;
+    height:350px;
+    width:700px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.7;
+}
+
+
+#input-CancelBookingtID #input-groupCancelBookingtID{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+
+#inputHeadingCancel h3{
+    border-bottom: 2px solid #3399ff;
+    width:180px;
+    padding: 5px;
+}
+
+

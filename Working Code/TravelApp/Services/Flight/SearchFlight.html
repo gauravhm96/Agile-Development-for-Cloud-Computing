@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Booking Form</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!--container-->
+
+        <form class="form-group" id="FlightSearch"> 
+            <!--form-->
+            <div>
+                <span>
+                    <h1 class="text-white">Flight Service</h1>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="SearchFlight.html">Search Flights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="GetFlightBookingDetails.html">Get Flight Booking Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="BookFlight.html">Book Flight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Reschedule.html">Reschedule Flight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CancelBooking.html">Cancel Flight</a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+
+            <div id="formSearchFlight">
+                <!--form-->
+                <h3 class="text-white">Search Flights</h3>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Source</label>
+                    </div>
+                    <select class="browser-default custom-select" id="inputGroupSelect01" name="Source" style="background: black; color:#fff;" required> 
+                        <option value="">Select</option>
+                        <option value="Frankfurt">Frankfurt</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Cologne-Bonn">Cologne-Bonn</option>
+                        <option value="Dusseldorf">Dusseldorf</option>
+                        <option value="Munich">Munich</option>
+                        <option value="Hamburg">Hamburg</option>
+                        <option value="Stuttgart">Stuttgart</option>
+                        <option value="Hannover">Hannover</option>
+                        <option value="Leipzig-Halle">Leipzig-Halle</option>
+                        <option value="Nuremberg">Nuremberg</option>
+                        <option value="Dresden">Dresden</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Destination</label>
+                    </div>
+                    <select class="browser-default custom-select" id="inputGroupSelect02" name="Destination" style="background: black; color:#fff;" required> 
+                        <option value="">Select</option>
+                        <option value="Frankfurt">Frankfurt</option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Cologne-Bonn">Cologne-Bonn</option>
+                        <option value="Dusseldorf">Dusseldorf</option>
+                        <option value="Munich">Munich</option>
+                        <option value="Hamburg">Hamburg</option>
+                        <option value="Stuttgart">Stuttgart</option>
+                        <option value="Hannover">Hannover</option>
+                        <option value="Leipzig-Halle">Leipzig-Halle</option>
+                        <option value="Nuremberg">Nuremberg</option>
+                        <option value="Dresden">Dresden</option>
+                    </select>
+                </div>
+
+                <div id="inputdates">
+                    <!--inputdates-->
+                    <input type="date" id="input-groupDate" placeholder="Date (yyyy.mm.dd)" name="date" required>
+                </div>
+                <!--inputdates-->
+
+                <button type="submit" class="btn btn-warning text-white">Search</button>
+                <button type="reset" class="btn btn-primary">Clear</button>
+
+                <div id="inputHeading">
+                    <!--inputHeading-->
+                    <h3 class="text-white">Flight Details</h3>
+                </div>
+                <!--inputHeading-->
+
+
+                <div id="inputMySearchDetails">
+                    <!--inputMyBookingDetails-->
+                    <h6> Itinerary ID : <span style="color:white" id="ItineraryID"></span></h6>
+                    <h6> Flights  : <span style="color:white" id="Flights"></span></h6>
+                    <h6> Source  : <span style="color:white" id="Source"></span></h6>
+                    <h6> Destination  : <span style="color:white" id="Destination"></span></h6>
+                    <h6> DepartureTime  : <span style="color:white" id="DepartureTime"></span></h6>
+                    <h6> ArrivalTime : <span style="color:white" id="ArrivalTime"></span></h6>
+                    <h6> BasePrice : <span style="color:white" id="BasePrice"></span></h6>
+                    <h6> TransitPorts : <span style="color:white" id="TransitPorts"></span></h6>
+                    <h6> Stops : <span style="color:white" id="Stops"></span></h6>
+                </div>
+
+            </div>
+        </form>
+        <!--form-->
+    </div>
+    <!--container-->
+</body>
+<script src="scripts.js"></script>
+</html>

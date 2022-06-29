@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Booking Form</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!--container-->
+
+        <form class="form-group">
+            <!--form-->
+            <div>
+                <span>
+                    <h1 class="text-white">Flight Service</h1>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="SearchFlight.html">Search Flights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="GetFlightBookingDetails.html">Get Flight Booking Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="BookFlight.html">Book Flight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Reschedule.html">Reschedule Flight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="CancelBooking.html">Cancel Flight</a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+
+            <div id="formCancel">
+                <!--form-->
+                <h3 class="text-white">Book Flight</h3>
+
+                <div id="input-CancelBookingtID">
+                    <!--input-Itinerary-ID-->
+                    <input type="text" id="input-groupCancelBookingtID" placeholder="Booking ID" required>
+                </div>
+                <!--input-Itinerary-ID-->>
+
+                <button type="submit" class="btn btn-warning text-white">Reschedule</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+
+                <div id="inputHeadingCancel">
+                    <!--inputHeading-->
+                    <h3 class="text-white">Cancel Status</h3>
+                </div>
+                <!--inputHeading-->
+
+                <div id="inputRescheduleDetails">
+                    <!--inputRescheduleDetails-->
+                    <h6> Reschedule Status: <span style="color:white" id="Status "></span></h6>
+                    <h6> Comment: <span style="color:white" id="Message "></span></h6>
+                </div>
+
+
+            </div>
+            <!--form-->
+        </form>
+        <!--form-->
+
+    </div>
+    <!--container-->
+</body>
+
+</html>
