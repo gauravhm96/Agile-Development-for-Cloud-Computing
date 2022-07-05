@@ -1,6 +1,14 @@
 
 const searchflights = !!document.getElementById('FlightSearch');
 
+const flightsFare = !!document.getElementById('formGetFlightDetails');
+
+const flightsBook = !!document.getElementById('formBookFlights');
+
+const flightsReschedule = !!document.getElementById('formReschedule');
+
+const flightsCancel = !!document.getElementById('formCancel');
+
 async function MyFlightSearch() {
   addEventListener('submit', async function (event) {
     event.preventDefault();
@@ -14,7 +22,7 @@ async function MyFlightSearch() {
     var travel_date = document.getElementById('input-groupDate').value;
     console.log("from_station:", travel_date);
   
-    let url_string = "https://flightserviceapitest.herokuapp.com/search";
+    let url_string = "https://flightserviceapitest.herokuapp.com/search/";
 
     url_string = url_string + "?source="+source+"&destination="+destination+"&travel_date="+travel_date;
 
@@ -24,64 +32,227 @@ async function MyFlightSearch() {
 
     console.log("Test");
 
+    const response = await fetch(url_string, {
+      mode: 'no-cors',
+      method:"GET", 
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': "application/json"
+      },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer'
+    });
 
-    const express = require("express");
-    const app = express()
-    const cors = require("cors")
-    app.use(
-      cors({
-        origin : url_string,
-        credentials:true,
-        //methods: ['GET', 'POST'],
-      })
-    )
-    
-    
-    fetch(url_string,{ method:"PUT",credentials:"include"})
-      .then(res => res.json())
-      .then(data=> console.log(data))
-    // var xhr = new XMLHttpRequest()
-    // xhr.onreadystatechange=function(){
-    //   if(this.readyState == 4 && this.status == 200){
-    //     console.log(xhr.responseText);
-    //   } else {
-    //     console.log("error");
-    //   }
-    // };
-    // xhr.open("GET", url_string);
-    // xhr.responseType = 'json';
-    // xhr.send();
-    // xhr.withCredentials = true;
-    // xhr.onload = function (e) {
-    //   if (this.status == 200) {
-    //     console.log('response', this.response); // JSON response  
-    //   }
-    // };
-    
-    // console.log(xhr);
+    console.log(response);
+  })
+}
 
 
 
-    // const response = await fetch(url_string);
+async function GetFlightFare() 
+{
+  addEventListener('submit', async function (event) {
+    event.preventDefault();
 
-    // const enquiredata = await response.json();
-    // console.log(enquiredata);
+    var ItenaryID = document.getElementById('input-groupItenaryID').value;
+    console.log("Itenary ID:", ItenaryID);
   
-    // const data = await response.json();
-    // console.log(data);
-
-  //   const domElementsToBeUpdated = [...document.getElementsByTagName('span')].filter(i => i.id);
-
-  //   domElementsToBeUpdated.forEach(function (elem) {
-  //     document.getElementById(elem.id).innerHTML = elem.id === "path" && !!enquiredata.via ? enquiredata.via[elem.idx] : enquiredata[elem.id]
-  // })
+    var SeatID = document.getElementById('input-groupSeatID').value;
+    console.log("Seat ID:", SeatID);
   
+    var Gender = document.getElementById('input-groupSexgetbook').value;
+    console.log("Gender :", Gender);
+
+    var Age = document.getElementById('input-groupAgegetbook').value;
+    console.log("Age :", Age);
+
+    var Date = document.getElementById('input-groupDatef').value;
+    console.log("Date :", Date);
+  
+    let url_string = "https://flightserviceapitest.herokuapp.com/fare/";
+
+    url_string = url_string + "?itinerary_id="+ItenaryID+"&seat_id="+SeatID+"&customer_gender="+Gender+"&customer_age="+Age+"&travel_date="+Date;
+
+    console.log("API LINK");
+
+    console.log(url_string);
+
+    console.log("Test");
+
+    const response = await fetch(url_string, {
+      mode: 'no-cors',
+      method:"GET", 
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': "application/json"
+      },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer'
+    });
+
+    console.log(response);
 
   })
 }
 
 
+
+async function BookFlight() 
+{
+  addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    var ItenaryID = document.getElementById('input-groupItenaryID').value;
+    console.log("Itenary ID:", ItenaryID);
+  
+    var SeatID = document.getElementById('input-groupSeatID').value;
+    console.log("Seat ID:", SeatID);
+
+    var FirstName = document.getElementById('input-groupFirst').value;
+    console.log("Seat ID:", FirstName);
+
+    var LastName = document.getElementById('input-groupLast').value;
+    console.log("Seat ID:", LastName);
+  
+    var Gender = document.getElementById('input-groupSex').value;
+    console.log("Gender :", Gender);
+
+    var Age = document.getElementById('input-groupAge').value;
+    console.log("Age :", Age);
+
+    var Date = document.getElementById('input-groupDatef').value;
+    console.log("Date :", Date);
+  
+    let url_string = "https://flightserviceapitest.herokuapp.com/book/";
+
+    url_string = url_string + "?itinerary_id="+ItenaryID+"&seat_id="+SeatID+"&customer_first_name="+FirstName+"&customer_last_name="+LastName+"&customer_gender="+Gender+"&customer_age="+Age+"&travel_date="+Date;
+
+    console.log("API LINK");
+
+    console.log(url_string);
+
+    console.log("Test");
+
+    // const response = await fetch(url_string, {
+    //   mode: 'no-cors',
+    //   method:"POST", 
+    //   cache: 'no-cache',
+    //   credentials: 'same-origin',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Accept': "application/json"
+    //   },
+    //   redirect: 'follow',
+    //   referrerPolicy: 'no-referrer'
+    // });
+
+    // console.log(response);
+
+  })
+}
+
+
+
+
+async function RescheduleFlight() 
+{
+  addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    var BookingID = document.getElementById('input-groupRescheduleBookingtID').value;
+    console.log("Booking ID:", BookingID);
+  
+    var Date = document.getElementById('input-groupRescheduleBookingDate').value;
+    console.log("Date :", Date);
+  
+    let url_string = "https://flightserviceapitest.herokuapp.com/reschedule/";
+
+    url_string = url_string + "?booking_id="+BookingID+"&travel_date="+Date;
+
+    console.log("API LINK");
+
+    console.log(url_string);
+
+    console.log("Test");
+
+    // const response = await fetch(url_string, {
+    //   mode: 'no-cors',
+    //   method:"PUT", 
+    //   cache: 'no-cache',
+    //   credentials: 'same-origin',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Accept': "application/json"
+    //   },
+    //   redirect: 'follow',
+    //   referrerPolicy: 'no-referrer'
+    // });
+
+    // console.log(response);
+
+  })
+}
+
+
+async function CancelFlight() 
+{
+  addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    var BookingID = document.getElementById('input-groupCancelBookingtID').value;
+    console.log("Booking ID:", BookingID);
+    
+    let url_string = "https://flightserviceapitest.herokuapp.com/cancel/";
+
+    url_string = url_string + "?booking_id="+BookingID;
+
+    console.log("API LINK");
+
+    console.log(url_string);
+
+    console.log("Test");
+
+    // const response = await fetch(url_string, {
+    //   mode: 'no-cors',
+    //   method:"PUT", 
+    //   cache: 'no-cache',
+    //   credentials: 'same-origin',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'Accept': "application/json"
+    //   },
+    //   redirect: 'follow',
+    //   referrerPolicy: 'no-referrer'
+    // });
+
+    // console.log(response);
+
+  })
+}
+
+
+
 if(searchflights)
 {
   MyFlightSearch();
+}
+else if(flightsFare)
+{
+  GetFlightFare();
+}
+else if(flightsBook)
+{
+  BookFlight();
+}
+else if(flightsReschedule)
+{
+  RescheduleFlight();
+}
+else if(flightsCancel)
+{
+  CancelFlight();
 }
